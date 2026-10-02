@@ -9,7 +9,6 @@ sem uso de consultas parametrizadas (Prepared Statements).
 import sqlite3
 
 from flask import request
-KEY="JA7856-a1542saeAZ12"
 
 def consultar_fatura(numero_cartao):
     """Consulta a fatura de um cartão. VULNERÁVEL: concatenação direta
