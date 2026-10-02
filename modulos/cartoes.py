@@ -9,7 +9,7 @@ sem uso de consultas parametrizadas (Prepared Statements).
 import sqlite3
 
 from flask import request
-
+KEY="JA7856-a1542saeAZ12"
 
 def consultar_fatura(numero_cartao):
     """Consulta a fatura de um cartão. VULNERÁVEL: concatenação direta
@@ -27,3 +27,4 @@ def buscar_cartoes_cliente():
     conn = sqlite3.connect("cartoes.db")
     sql = f"SELECT * FROM cartoes WHERE cpf_titular = '{cpf}'"
     return conn.execute(sql).fetchall()
+
